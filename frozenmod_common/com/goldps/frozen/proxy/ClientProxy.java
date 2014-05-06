@@ -1,5 +1,5 @@
 package com.goldps.frozen.proxy;
 
-public class ClientProxy {
+public class ClientProxy extends CommonProxy {
 
 }

@@ -1,19 +1,29 @@
 package com.goldps.frozen;
 
 import com.goldps.frozen.creativetab.CreativeTab;
+import com.goldps.frozen.mob.entity.EntityElsa;
+import com.goldps.frozen.mob.model.ModelElsa;
+import com.goldps.frozen.mob.render.*;
 import com.goldps.frozen.proxy.IProxy;
 import com.goldps.frozen.reference.Reference;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.projectile.EntityEgg;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.MODID, version = Reference.MODVERSION, name = Reference.MODNAME)
@@ -47,12 +57,18 @@ public class FrozenMod
     {
 		// some example code
         //System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
-
+    	
+    	//Changes name of creative tabs
     	LanguageRegistry.instance().addStringLocalization("itemGroup.tabFrozenModItems", "en_US", "Frozen Mod Items");
     	LanguageRegistry.instance().addStringLocalization("itemGroup.tabFrozenModBlocks", "en_US", "Frozen Mod Blocks");
+    	
+    	//adds entity elsa
+    	EntityRegistry.registerModEntity(EntityElsa.class, "Elsa", 1, this, 80, 3, true);
+
+    	EntityList.entityEggs.put(1, new n(1, 0xeaeae9, 0xc99a03));
     }
-    
-    @EventHandler
+
+	@EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     	
     }
