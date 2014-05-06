@@ -12,16 +12,17 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class CreativeTab {
-	public static final CreativeTabs FROZEN_TAB = new CreativeTabs(Reference.MODID) {
-		@Override
+	/*
+	public static final CreativeTabs tabFrozenModItems = new CreativeTabs("tabFrozenModItems") {
 		public Item getTabIconItem() {
 			return Items.diamond;
 		}
-		
-		@Override
-		@SideOnly(Side.CLIENT)
-		public String getTranslatedTabLabel() {
-			return Reference.MODNAME;
+	};
+	
+	public static final CreativeTabs tabFrozenModBlocks = new CreativeTabs("tabFrozenModBlocks") {
+		public Item getTabIconItem() {
+			return Items.diamond;
 		}
 	};
+	*/
 }
