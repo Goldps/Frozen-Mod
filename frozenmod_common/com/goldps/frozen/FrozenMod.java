@@ -59,9 +59,13 @@ public class FrozenMod
 	//Event Handlers
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		
+		
 		//Mobs
     	int id = 0;
+    	
     	//adds entity Elsa
+    	//EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
     	EntityRegistry.registerModEntity(EntityElsa.class, "Elsa", 1, this, 80, 3, true);
 		//EntityRegistry.addSpawn(EntityElsa.class, 1000, 1, 3, EnumCreatureType.monster, BiomeGenBase.icePlains);
   
@@ -71,15 +75,7 @@ public class FrozenMod
     			EntityRegistry.addSpawn(EntityElsa.class, 1000, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     		}
     	}
-    	/*
-    	//adds mobs to all biomes
-    	for(BiomeGenBase i : BiomeGenBase.getBiomeGenArray()) {
-    		if(i != null)
-    		{
-    			EntityRegistry.addSpawn(EntityElsa.class, 10, 3, 6, EnumCreatureType.creature, i);
-    		}
-    	}
- 		*/
+
     	CommonProxy.registerRenderThings();
         //EntityList.entityEggs.put(1, new n(1, 0xeaeae9, 0xc99a03));
 	}
