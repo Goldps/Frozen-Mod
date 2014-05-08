@@ -4,7 +4,7 @@ public interface Reference {
 	public static final String MODID = "FrozenMod";
 	public static final String MODNAME = "Frozen Mod";
 	public static final String MODVERSION ="0.0.3";
-	public static final String SERVER_PROXY_CLASS = "com.goldps.frozenmod.proxy.ServerProxy";
-	public static final String CLIENT_PROXY_CLASS = "com.goldps.frozenmod.proxy.ClientProxy";
+	public static final String SERVER_PROXY_CLASS = "com.goldps.frozen.proxy.Common";
+	public static final String CLIENT_PROXY_CLASS = "com.goldps.frozen.proxy.Client";
 	
 }
