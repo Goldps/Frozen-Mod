@@ -1,10 +1,10 @@
 package com.goldps.frozen.mob.entity;
 
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.world.World;
 
-public class EntityElsa extends EntityMob {
+public class EntityElsa extends EntityLiving {
 	
 	public EntityElsa(World par1World) {
 		super(par1World);
