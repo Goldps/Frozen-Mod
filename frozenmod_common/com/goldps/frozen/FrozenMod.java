@@ -66,9 +66,10 @@ public class FrozenMod
     	
     	//adds entity Elsa
     	//EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
-    	EntityRegistry.registerModEntity(EntityElsa.class, "Elsa", 1, this, 80, 3, true);
+    	EntityRegistry.registerModEntity(EntityElsa.class, "Elsa", id, this, 80, 3, true);
 		//EntityRegistry.addSpawn(EntityElsa.class, 1000, 1, 3, EnumCreatureType.monster, BiomeGenBase.icePlains);
-  
+    	EntityList.addMapping(EntityElsa.class, "Elsa", 500, 0x75FAFA, 0x161EFA);
+    	
     	for(int i = 0; i < BiomeGenBase.getBiomeGenArray().length - 1; i++) {
     		if(BiomeGenBase.getBiomeGenArray()[i] != null)
     		{

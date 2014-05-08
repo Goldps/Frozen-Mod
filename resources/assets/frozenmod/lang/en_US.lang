@@ -1,4 +1,5 @@
 entity.FrozenMod.Elsa.name=Elsa
+entity.Elsa.name=Elsa
 
 itemGroup.tabFrozenModItems=Frozen Mod Items
 itemGroup.tabFrozenModBlocks=Frozen Mod Blocks

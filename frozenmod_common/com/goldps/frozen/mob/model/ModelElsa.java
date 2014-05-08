@@ -9,6 +9,7 @@ package com.goldps.frozen.mob.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class ModelElsa extends ModelBase
 {
@@ -82,9 +83,18 @@ public class ModelElsa extends ModelBase
     model.rotateAngleZ = z;
   }
   
-  public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
-  {
-    super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+  public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6) { 
+	  this.head.rotateAngleY = par4 / (180F / (float)Math.PI);
+      this.head.rotateAngleX = par5 / (180F / (float)Math.PI);
+      this.rightarm.rotationPointY = 3.0F;
+      this.rightarm.rotationPointZ = -1.0F;
+      this.rightarm.rotateAngleX = -0.75F;
+      this.leftarm.rotationPointY = 3.0F;
+      this.leftarm.rotationPointZ = -1.0F;
+      this.leftarm.rotateAngleX = -0.75F;
+      this.rightleg.rotateAngleX = MathHelper.cos(par1 * 0.6662F) * 1.4F * par2 * 0.5F;
+      this.leftleg.rotateAngleX = MathHelper.cos(par1 * 0.6662F + (float)Math.PI) * 1.4F * par2 * 0.5F;
+      this.rightleg.rotateAngleY = 0.0F;
+      this.leftleg.rotateAngleY = 0.0F;
   }
-
 }
