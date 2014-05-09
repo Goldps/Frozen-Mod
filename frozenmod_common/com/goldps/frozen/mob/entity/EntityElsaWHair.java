@@ -2,13 +2,26 @@ package com.goldps.frozen.mob.entity;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-public class EntityElsa extends EntityLiving {
+public class EntityElsaWHair extends EntityLiving {
 	
-	public EntityElsa(World par1World) {
+	public EntityElsaWHair(World par1World) {
 		super(par1World);
 		this.setSize(0.9F, 1.3F);
+		this.tasks.addTask(0, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+		this.tasks.addTask(1, new EntityAISwimming(this));
+	}
+	
+	protected boolean isAIEnabled() {
+		return true;
+	}
+	
+	protected void playStepSound(int par1, int par2, int par3, int par4) {
+		this.worldObj.playSoundAtEntity(this, "mob.zombie.step", 0.15F, 1.0F);
 	}
 	
     @Override

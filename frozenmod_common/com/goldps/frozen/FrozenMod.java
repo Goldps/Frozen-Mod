@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import com.goldps.frozen.creativetab.CreativeTab;
 import com.goldps.frozen.mob.entity.EntityAnnaWHair;
-import com.goldps.frozen.mob.entity.EntityElsa;
-import com.goldps.frozen.mob.model.ModelElsa;
+import com.goldps.frozen.mob.entity.EntityElsaWHair;
+import com.goldps.frozen.mob.model.ModelElsaWHair;
 import com.goldps.frozen.mob.render.*;
 import com.goldps.frozen.proxy.Client;
 import com.goldps.frozen.proxy.Common;
@@ -78,8 +78,8 @@ public class FrozenMod
 	public void preInit(FMLPreInitializationEvent event) {
     	
     	//adds entity Elsa
-    	EntityRegistry.registerModEntity(EntityElsa.class, "Elsa", MOB_ID, this, 80, 3, true);
-    	EntityList.addMapping(EntityElsa.class, "Elsa", ITEM_ID, 0x75FAFA, 0x161EFA);
+    	EntityRegistry.registerModEntity(EntityElsaWHair.class, "Elsa", MOB_ID, this, 80, 3, true);
+    	EntityList.addMapping(EntityElsaWHair.class, "Elsa", ITEM_ID, 0x75FAFA, 0x161EFA);
     	
     	incrementIDs();
     	
@@ -107,7 +107,7 @@ public class FrozenMod
     	for(int i = 0; i < BiomeGenBase.getBiomeGenArray().length - 1; i++) {
     		if(BiomeGenBase.getBiomeGenArray()[i] != null)
     		{
-    			EntityRegistry.addSpawn(EntityElsa.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
+    			EntityRegistry.addSpawn(EntityElsaWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     			EntityRegistry.addSpawn(EntityAnnaWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     		}
     	}
