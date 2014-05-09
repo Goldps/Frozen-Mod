@@ -3,7 +3,7 @@ package com.goldps.frozen;
 import java.util.ArrayList;
 
 import com.goldps.frozen.creativetab.CreativeTab;
-import com.goldps.frozen.mob.entity.EntityAnna;
+import com.goldps.frozen.mob.entity.EntityAnnaWHair;
 import com.goldps.frozen.mob.entity.EntityElsa;
 import com.goldps.frozen.mob.model.ModelElsa;
 import com.goldps.frozen.mob.render.*;
@@ -84,8 +84,8 @@ public class FrozenMod
     	incrementIDs();
     	
     	//adds entity Anna
-    	EntityRegistry.registerModEntity(EntityAnna.class, "Elsa", MOB_ID, this, 80, 3, true);
-    	EntityList.addMapping(EntityAnna.class, "Elsa", ITEM_ID, 0x75FAFA, 0x161EFA);
+    	EntityRegistry.registerModEntity(EntityAnnaWHair.class, "Anna", MOB_ID, this, 80, 3, true);
+    	EntityList.addMapping(EntityAnnaWHair.class, "Anna", ITEM_ID, 0x7D9810, 0x465215);
     
     	incrementIDs();
     	
@@ -103,12 +103,12 @@ public class FrozenMod
     	
     	incrementIDs();
     	
-    	//adds entity 
     	//Goes through all biomes and adds entity mobs to spawn
     	for(int i = 0; i < BiomeGenBase.getBiomeGenArray().length - 1; i++) {
     		if(BiomeGenBase.getBiomeGenArray()[i] != null)
     		{
-    			EntityRegistry.addSpawn(EntityElsa.class, 1000, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
+    			EntityRegistry.addSpawn(EntityElsa.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
+    			EntityRegistry.addSpawn(EntityAnnaWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     		}
     	}
     	
