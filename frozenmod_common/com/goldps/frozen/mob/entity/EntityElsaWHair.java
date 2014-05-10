@@ -1,19 +1,26 @@
 package com.goldps.frozen.mob.entity;
 
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-public class EntityElsaWHair extends EntityLiving {
+public class EntityElsaWHair extends EntityCreature {
+	
+	private double moveSpeed = 0.25;
 	
 	public EntityElsaWHair(World par1World) {
 		super(par1World);
 		this.setSize(0.9F, 1.3F);
+		this.setAIMoveSpeed(0.25F);
+		
 		this.tasks.addTask(0, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
 		this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(2, new EntityAIWander(this, moveSpeed));
 	}
 	
 	protected boolean isAIEnabled() {

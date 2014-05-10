@@ -4,6 +4,7 @@ package com.goldps.frozen.mob.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class ModelAnnaWHair extends ModelBase
 {
@@ -68,7 +69,7 @@ public class ModelAnnaWHair extends ModelBase
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
-    setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    setRotationAngles(entity, f, f1, f2, f3, f4, f5);
     Hair.render(f5);
     Head.render(f5);
     Body.render(f5);
@@ -84,10 +85,27 @@ public class ModelAnnaWHair extends ModelBase
     model.rotateAngleY = y;
     model.rotateAngleZ = z;
   }
-  
-  public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
+
+  private void setRotationAngles(Entity entity, float time, float walkSpeed, float par2, float rotationYaw, float rotationPitch , float scale  )
   {
-    super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+	  
+	  this.Head.rotateAngleY = rotationYaw / (180F / (float)Math.PI);
+	  this.Head.rotateAngleX = rotationPitch / (180F / (float)Math.PI);
+
+	  this.Hair.rotateAngleY = this.Head.rotateAngleY;
+	  this.Hair.rotateAngleX = this.Head.rotateAngleX;
+	  
+	  this.RightLeg.rotateAngleX = MathHelper.cos(time * 0.6662F) * 1.4F * walkSpeed;
+	  this.LeftLeg.rotateAngleX = MathHelper.cos(time * 0.6662F + 3.1415927F) * 1.4F * walkSpeed;
+	  
+	  this.RightLeg.rotateAngleY = 0.0F;
+	  this.LeftLeg.rotateAngleY = 0.0F;
+	  
+	  this.RightArm.rotateAngleX = MathHelper.cos(time * 0.6662F) * 1.4F * walkSpeed;
+	  this.LeftArm.rotateAngleX = MathHelper.cos(time * 0.6662F + 3.1415927F) * 1.4F * walkSpeed;
+	  
+	  this.RightArm.rotateAngleY = 0.0F;
+	  this.LeftArm.rotateAngleY = 0.0F;
   }
 
 }
