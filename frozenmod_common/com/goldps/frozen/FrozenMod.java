@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.goldps.frozen.creativetab.CreativeTab;
 import com.goldps.frozen.mob.entity.EntityAnnaWHair;
 import com.goldps.frozen.mob.entity.EntityElsaWHair;
-import com.goldps.frozen.mob.model.ModelElsaWHair;
 import com.goldps.frozen.mob.render.*;
 import com.goldps.frozen.proxy.Client;
 import com.goldps.frozen.proxy.Common;
@@ -38,7 +37,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = Reference.MODID, version = Reference.MODVERSION, name = Reference.MODNAME)
 public class FrozenMod
 {
-	@Instance(value = "mod")
+	@Instance(value = "FrozenMod")
 	public static FrozenMod instance;
 	
 	//Proxy setup
