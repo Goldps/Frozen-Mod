@@ -2,6 +2,8 @@ entity.FrozenMod.Elsa.name=Elsa
 entity.Elsa.name=Elsa
 entity.FrozenMod.Anna.name=Anna
 entity.Anna.name=Anna
+entity.FrozenMod.Kristoff.name=Kristoff
+entity.Kristoff.name=Kristoff
 
 itemGroup.tabFrozenModItems=Frozen Mod Items
 itemGroup.tabFrozenModSpawnEggs=Frozen Mod Spawn Eggs

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.goldps.frozen.creativetab.CreativeTab;
 import com.goldps.frozen.mob.entity.EntityAnnaWHair;
 import com.goldps.frozen.mob.entity.EntityElsaWHair;
+import com.goldps.frozen.mob.entity.EntityKristoffWHair;
 import com.goldps.frozen.mob.render.*;
 import com.goldps.frozen.proxy.Client;
 import com.goldps.frozen.proxy.Common;
@@ -90,6 +91,9 @@ public class FrozenMod
     	
     	//adds entity Kristoff
 
+    	EntityRegistry.registerModEntity(EntityKristoffWHair.class, "Kristoff", MOB_ID, this, 80, 3, true);
+    	EntityList.addMapping(EntityKristoffWHair.class, "Kristoff", ITEM_ID, 0x523a37, 0x5b7971);
+    	
     	incrementIDs();
     	
     	//adds entity Olaf
@@ -108,6 +112,7 @@ public class FrozenMod
     		{
     			EntityRegistry.addSpawn(EntityElsaWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     			EntityRegistry.addSpawn(EntityAnnaWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
+    			EntityRegistry.addSpawn(EntityKristoffWHair.class, 20, 3, 6, EnumCreatureType.creature, BiomeGenBase.getBiomeGenArray()[i]);
     		}
     	}
     	
