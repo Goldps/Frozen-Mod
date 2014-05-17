@@ -57,6 +57,9 @@ public class FrozenMod
 	//Creative tab for SpawnEggs in the mod
 	public static CreativeTabs tabFrozenModSpawnEggs = new FrozenSpawnEggs(CreativeTabs.getNextID(), "tabFrozenModSpawnEggs");
 	
+	
+	//blocks 
+	public static Block PurpleIce  = new PurpleIce(650, Material.ice);
 	/*
 	//Creative tab for blocks in the mod
 	public static CreativeTabs tabFrozenModBlocks = new CreativeTabs("tabFrozenModBlocks") {
