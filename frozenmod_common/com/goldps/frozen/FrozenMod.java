@@ -51,18 +51,11 @@ public class FrozenMod
 	
 	//Creative Tabs
 	//Creative tab for items in the mod
-	public static CreativeTabs tabFrozenModItems = new CreativeTabs("tabFrozenModItems") {
-		public Item getTabIconItem() {
-			return new Item();
-		}
-	};
-	
-	//Creative tab for blocks in the mod
-	public static CreativeTabs tabFrozenModSpawnEggs = new CreativeTabs("tabFrozenModSpawnEggs") {
-		public Item getTabIconItem() {
-			return Items.spawn_egg;
-		}
-	};
+	public static CreativeTabs tabFrozenModItems = new FrozenItems(CreativeTabs.getNextID(), "tabFrozenModItems");
+	//Creative Tab blocks
+	public static CreativeTabs tabFrozenModBlocks = new FrozenBlocks(CreativeTabs.getNextID(), "tabFrozenModBlocks");
+	//Creative tab for SpawnEggs in the mod
+	public static CreativeTabs tabFrozenModSpawnEggs = new FrozenSpawnEggs(CreativeTabs.getNextID(), "tabFrozenModSpawnEggs");
 	
 	/*
 	//Creative tab for blocks in the mod
