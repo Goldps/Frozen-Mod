@@ -9,7 +9,6 @@ import com.goldps.frozen.mob.model.ModelKristoffWHair;
 import com.goldps.frozen.mob.render.RenderAnnaWHair;
 import com.goldps.frozen.mob.render.RenderElsaWHair;
 import com.goldps.frozen.mob.render.RenderKristoffWHair;
-
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class Client extends Common {
@@ -24,5 +23,4 @@ public class Client extends Common {
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityKristoffWHair.class, new RenderKristoffWHair(new ModelKristoffWHair(), 0.3F));
 	}
-	
 }

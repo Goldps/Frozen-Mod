@@ -2,7 +2,7 @@ package com.goldps.frozen;
 
 import java.util.ArrayList;
 
-import com.goldps.frozen.creativetab.CreativeTab;
+import com.goldps.frozen.creativetab.*;
 import com.goldps.frozen.mob.entity.EntityAnnaWHair;
 import com.goldps.frozen.mob.entity.EntityElsaWHair;
 import com.goldps.frozen.mob.entity.EntityKristoffWHair;
@@ -10,9 +10,12 @@ import com.goldps.frozen.mob.render.*;
 import com.goldps.frozen.proxy.Client;
 import com.goldps.frozen.proxy.Common;
 import com.goldps.frozen.reference.Reference;
+import com.goldps.frozen.blocks.*;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterators;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
@@ -60,6 +63,7 @@ public class FrozenMod
 	
 	//blocks 
 	public static Block PurpleIce  = new PurpleIce(650, Material.ice);
+	
 	/*
 	//Creative tab for blocks in the mod
 	public static CreativeTabs tabFrozenModBlocks = new CreativeTabs("tabFrozenModBlocks") {
